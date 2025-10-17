@@ -12,15 +12,28 @@
 
 /* home section background only */
 #home.content {
-    width: 100;
+    width: 100%;
+    margin: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%), url("14.jpg") center/cover no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: calc(100vh - 75px);
-    margin: 0; /* Remove auto margin */
-    padding: 0 20px; /* Add some padding if needed */
+    padding: 0 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This centers your content vertically */
+}
+
+/* Keep your text content centered */
+#home .content h1,
+#home .content .par,
+#home .content .cn {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Optional: limit text width */
+    width: 100%;
 }
 
 .site-header{
@@ -265,6 +278,7 @@ html {
 :target {
     scroll-margin-top: 80px; /* adjust if navbar height differs */
 }
+
 
 
 
