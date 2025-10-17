@@ -12,9 +12,10 @@
 
 /* home section background only */
 #home.content {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%), url("13.jpg") center/cover no-repeat;
-    background-position: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%), url("13.jpg") center/cover no-repeat;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: calc(100vh - 75px);
 }
 
@@ -260,4 +261,5 @@ html {
 :target {
     scroll-margin-top: 80px; /* adjust if navbar height differs */
 }
+
 
