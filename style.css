@@ -8,8 +8,8 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%), url(1.jpg);
     background-position: center;
     background-size: cover;
-    height: 109vh;
-    padding-top: 75px; /* same as .navbar height */
+    /* remove fixed height so all sections can be visible */
+    padding-top: 75px; /* keep space for fixed navbar */
 }
 
 .navbar{
