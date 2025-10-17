@@ -12,17 +12,27 @@
     padding-top: 75px; /* keep space for fixed navbar */
 }
 
+.site-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    background: #333; /* dark gray header */
+    z-index: 999;
+    display: flex;
+    justify-content: center; /* center .navbar inside header */
+    align-items: center;
+}
+
 .navbar{
     width: 1200px;
     height: 75px;
-    margin: auto;
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* keeps 1200px centered if you keep that width */
-    z-index: 100;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
 }
 
 .icon{
@@ -221,13 +231,9 @@ html {
 }
 
 /* ensure navbar is centered and above content */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* keep centered */
-    height: 75px; /* keep in sync with padding-top below */
-    z-index: 1000;
+.site-header { /* keep this in sync with .main padding-top */
+    height: 75px;
+    z-index: 999;
 }
 
 /* push page content below the fixed navbar */
