@@ -220,32 +220,31 @@ html {
     scroll-behavior: smooth;
 }
 
-
+/* ensure navbar is centered and above content */
 .navbar {
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); 
-    z-index: 100;
+    transform: translateX(-50%); /* keep centered */
+    height: 75px; /* keep in sync with padding-top below */
+    z-index: 1000;
 }
 
+/* push page content below the fixed navbar */
 .main {
-    padding-top: 75px; 
-}
-
-.page-section,
-.content {
-    min-height: calc(100vh - 75px);
-    padding: 40px 60px; 
+    padding-top: 75px; /* same value as .navbar height */
     box-sizing: border-box;
 }
 
-#home.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* make each section fill viewport (one-scroll feel) and be visible */
+.page-section,
+.content {
+    min-height: calc(100vh - 75px); /* viewport minus navbar */
+    padding: 40px 60px;
+    box-sizing: border-box;
 }
 
+/* ensure anchor target isn't hidden behind the fixed header */
 :target {
-    scroll-margin-top: 80px; 
+    scroll-margin-top: 80px; /* adjust if navbar height differs */
 }
