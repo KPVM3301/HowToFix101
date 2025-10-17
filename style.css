@@ -267,17 +267,69 @@ html {
 }
 
 /* make each section fill viewport (one-scroll feel) and be visible */
-.page-section,
-.content {
-    min-height: calc(100vh - 75px); /* viewport minus navbar */
+/* Common styles for all sections */
+.page-section {
+    min-height: calc(100vh - 75px);
     padding: 40px 60px;
     box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
 }
 
-/* ensure anchor target isn't hidden behind the fixed header */
-:target {
-    scroll-margin-top: 80px; /* adjust if navbar height differs */
+/* Content container for all sections */
+.section-content {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
+
+/* Home section */
+#home.page-section {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%), url("12.jpg") center/cover no-repeat;
+}
+
+/* About section */
+#about.page-section {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("about-bg.jpg") center/cover no-repeat;
+}
+
+/* Services section */
+#services.page-section {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("services-bg.jpg") center/cover no-repeat;
+}
+
+/* Design section */
+#design.page-section {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("design-bg.jpg") center/cover no-repeat;
+}
+
+/* Contact section */
+#contact.page-section {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("contact-bg.jpg") center/cover no-repeat;
+}
+
+/* Text styles */
+.page-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.page-section p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 
 
 
