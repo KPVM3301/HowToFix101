@@ -9,6 +9,7 @@
     background-position: center;
     background-size: cover;
     height: 109vh;
+    padding-top: 75px; /* same as .navbar height */
 }
 
 .navbar{
@@ -17,6 +18,11 @@
     margin: auto;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* keeps 1200px centered if you keep that width */
+    z-index: 100;
 }
 
 .icon{
@@ -74,7 +80,7 @@ ul li a:hover{
     color: rgb(0, 0, 0);
     border-radius: 20px;
 }
-TECH\style.css */
+
 .search {
     position: relative;
     width: 210px;
@@ -209,3 +215,37 @@ TECH\style.css */
     margin-left: -30px; 
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 100;
+}
+
+.main {
+    padding-top: 75px; 
+}
+
+.page-section,
+.content {
+    min-height: calc(100vh - 75px);
+    padding: 40px 60px; 
+    box-sizing: border-box;
+}
+
+#home.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+:target {
+    scroll-margin-top: 80px; 
+}
