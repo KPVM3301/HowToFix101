@@ -24,9 +24,9 @@
                  </div>
  
                 <div class="search">
-    <form action="https://www.google.com/search" method="GET" target="_blank" style="display:flex; align-items:center;">
-        <input class="srch" type="text" name="q" placeholder="Type to search" required>
-        <button class="btn" type="submit">🔍</button>
+    <form onsubmit="searchSite(event)" style="display:flex; align-items:center;">
+        <input class="srch" type="text" id="searchInput" placeholder="Type to search" required>
+        <button class="btn" type="submit">Search</button>
     </form>
 </div>
 
@@ -177,8 +177,36 @@
 </section>
 
     </div>
+    <script>
+function searchSite(event) {
+  event.preventDefault(); // Stop form from reloading page
+  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+  const elements = document.querySelectorAll("section, p, h1, h2, h3, li");
+
+  let found = false;
+
+  elements.forEach(element => {
+    const text = element.textContent.toLowerCase();
+    if (text.includes(searchTerm) && !found) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      // Optional: Add highlight effect
+      element.style.backgroundColor = "rgba(255, 255, 0, 0.3)";
+      setTimeout(() => element.style.backgroundColor = "transparent", 2000);
+      
+      found = true;
+    }
+  });
+
+  if (!found) {
+    alert("No match found on this page.");
+  }
+}
+</script>
+
 </body>
 </html>
+
 
 
 
