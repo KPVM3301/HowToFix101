@@ -36,12 +36,13 @@ html {
     z-index: 1000;
 }
 
+
 .menu-toggle {
-    display: none; 
+    display: none;
     font-size: 30px;
     color: white;
     cursor: pointer;
-    margin-left: auto; 
+    margin-left: auto;
     padding-right: 20px;
 }
 
@@ -61,6 +62,12 @@ html {
     padding-left: 20px;
     float: left;
 }
+
+
+.menu-open .logo {
+    display: none !important;
+}
+
 
 .menu{
     width: 800px;
@@ -102,6 +109,7 @@ ul li a:hover{
     border-radius: 20px;
 }
 
+
 .search {
     position: relative;
     width: 210px;
@@ -118,7 +126,7 @@ ul li a:hover{
     border-radius: 20px;
     font-size: 16px;
     color: rgb(255, 255, 255);
-    padding-left: 35px;
+    padding-left: 12px;
     outline: none;
     font-family: 'Segoe UI', 'Arial', sans-serif;
     border-right: none;
@@ -126,13 +134,13 @@ ul li a:hover{
 }
 
 .btn{
-    width: 35px;
-    height: 20px;
-    margin-left: 10px;
-    background: rgba(255, 255, 255, 0.212);
-    border: 1px solid rgba(255, 255, 255, 0.212);
+    width: 60px;
+    height: 34px;
+    margin-left: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     color: rgb(255, 255, 255);
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
@@ -153,7 +161,6 @@ ul li a:hover{
     position: relative;
     box-sizing: border-box;
 }
-
 
 .section-content {
     width: 1200px;
@@ -176,10 +183,10 @@ ul li a:hover{
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("16.jpg") center/cover no-repeat;
 }
 
-
 #portfolio.page-section {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("17.jpg") center/cover no-repeat;
 }
+
 
 .portfolio-gallery {
     display: flex;
@@ -226,18 +233,6 @@ ul li a:hover{
     margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    .portfolio-gallery,
-    .portfolio-comparison {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-item {
-        max-width: 90%;
-    }
-}
-
 
 #contact.page-section {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("18.jpg") center/cover no-repeat;
@@ -273,12 +268,6 @@ ul li a:hover{
     color: #fff;
 }
 
-@media (max-width: 768px) {
-    .contact-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
 
 .section-content h1 {
     font-size: 50px;
@@ -339,10 +328,10 @@ ul li a:hover{
     text-decoration: none;
 }
 
-
 :target {
-    scroll-margin-top: 75px; 
+    scroll-margin-top: 75px;
 }
+
 
 #about.page-section p {
     background: rgba(0, 0, 0, 0.4);
@@ -395,16 +384,6 @@ ul li a:hover{
 }
 
 
-@media (max-width: 768px) {
-    .timeline {
-        padding-left: 20px;
-    }
-
-    .timeline-content {
-        font-size: 16px;
-    }
-}
-
 #services.page-section {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("16.jpg") center/cover no-repeat;
 }
@@ -455,18 +434,6 @@ ul li a:hover{
 
 
 @media (max-width: 768px) {
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    
     .section-content {
         width: 95%;
         padding: 20px 10px;
@@ -488,32 +455,22 @@ ul li a:hover{
         line-height: 1.4;
     }
 
-  
-    .menu ul {
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 75px;
-        left: 0;
-        width: 100%;
-        display: none;
-        padding: 20px 0;
-        border-bottom: 2px solid #444;
-    }
-
-    .menu ul.show {
-        display: flex;
-    }
-
+   
     .menu-toggle {
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
         display: block;
-        padding-left: 20px;
     }
 
+    .menu {
+        display: none;
+    }
+
+ 
     .search {
+        display: none;
+    }
+
+   
+    .mobile-menu {
         display: none; 
     }
 
@@ -521,7 +478,6 @@ ul li a:hover{
         margin: 15px 0;
     }
 
-  
     .services-container,
     .portfolio-comparison {
         flex-direction: column;
@@ -534,7 +490,6 @@ ul li a:hover{
         max-width: 400px;
     }
 
-    
     .contact-item {
         flex-direction: column;
         align-items: flex-start;
@@ -542,30 +497,86 @@ ul li a:hover{
     }
 }
 
-.menu-toggle {
-    display: block;
-}
 
-.menu ul {
-    display: none; 
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 75px;
-    left: 0;
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
     width: 100%;
-    padding: 20px 0;
-    border-bottom: 2px solid #444;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    z-index: 2000;
+    transition: left 0.35s ease;
+    display: block;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-.menu ul.show {
-    display: flex;
+
+.mobile-menu.open {
+    left: 0;
 }
 
 
+.mobile-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px;
+}
 
 
+.mobile-menu-content {
+    padding: 80px 24px 40px 24px;
+    text-align: left;
+}
+
+.mobile-menu-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-content li {
+    margin-bottom: 24px;
+}
+
+.mobile-menu-content a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 600;
+    display: block;
+    padding: 8px 0;
+}
+
+.mobile-menu-content a:hover {
+    color: #00aced;
+}
 
 
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
 
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
 
+@media (min-width: 769px) {
+    .overlay, .mobile-menu {
+        display: none;
+    }
+}
