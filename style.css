@@ -166,7 +166,7 @@ ul li a:hover{
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("16.jpg") center/cover no-repeat;
 }
 
-#design.page-section {
+#portfolio.page-section {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("17.jpg") center/cover no-repeat;
 }
 
@@ -238,3 +238,4 @@ ul li a:hover{
 :target {
     scroll-margin-top: 75px; /* Match your navbar height */
 }
+
