@@ -166,9 +166,69 @@ ul li a:hover{
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("16.jpg") center/cover no-repeat;
 }
 
+/* Portfolio Section */
 #portfolio.page-section {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("17.jpg") center/cover no-repeat;
 }
+
+.portfolio-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.4);
+}
+
+.portfolio-item p {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #f0f0f0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.portfolio-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .portfolio-gallery,
+    .portfolio-comparison {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        max-width: 90%;
+    }
+}
+
 
 #contact.page-section {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("18.jpg") center/cover no-repeat;
@@ -238,4 +298,5 @@ ul li a:hover{
 :target {
     scroll-margin-top: 75px; /* Match your navbar height */
 }
+
 
