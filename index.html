@@ -179,7 +179,7 @@
     </div>
     <script>
 function searchSite(event) {
-  event.preventDefault(); // Stop form from reloading page
+  event.preventDefault();
   const searchTerm = document.getElementById("searchInput").value.toLowerCase();
   const elements = document.querySelectorAll("section, p, h1, h2, h3, li");
 
@@ -190,7 +190,7 @@ function searchSite(event) {
     if (text.includes(searchTerm) && !found) {
       element.scrollIntoView({ behavior: "smooth", block: "center" });
       
-      // Optional: Add highlight effect
+      
       element.style.backgroundColor = "rgba(255, 255, 0, 0.3)";
       setTimeout(() => element.style.backgroundColor = "transparent", 2000);
       
@@ -206,6 +206,7 @@ function searchSite(event) {
 
 </body>
 </html>
+
 
 
 
