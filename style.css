@@ -455,6 +455,84 @@ ul li a:hover{
     }
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* General Layout Fix */
+    .section-content {
+        width: 95%;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .par {
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    /* Navbar Mobile */
+    .menu ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 20px 0;
+        border-bottom: 2px solid #444;
+    }
+
+    .menu ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        display: block;
+        padding-left: 20px;
+    }
+
+    .search {
+        display: none; /* Hide search bar to save space */
+    }
+
+    ul li {
+        margin: 15px 0;
+    }
+
+    /* Cards (Services, Portfolio Items) */
+    .services-container,
+    .portfolio-comparison {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card,
+    .portfolio-item {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    /* Contact Section */
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
 
 
 
