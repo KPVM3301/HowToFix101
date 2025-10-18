@@ -293,12 +293,12 @@ html {
 
 /* Home section */
 #home.page-section {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%), url("12.jpg") center/cover no-repeat;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%), url("14.jpg") center/cover no-repeat;
 }
 
 /* About section */
 #about.page-section {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("about-bg.jpg") center/cover no-repeat;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("15.jpg") center/cover no-repeat;
 }
 
 /* Services section */
@@ -329,6 +329,7 @@ html {
     margin-bottom: 15px;
     font-family: 'Times New Roman', Times, serif;
 }
+
 
 
 
