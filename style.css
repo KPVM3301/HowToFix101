@@ -337,5 +337,13 @@ ul li a:hover{
     scroll-margin-top: 75px; /* Match your navbar height */
 }
 
+#about.page-section p {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+
+
 
 
