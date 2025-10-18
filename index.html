@@ -2,245 +2,271 @@
 <html lang="en">
 <head>
     <title>HowToFix101</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div class="main">
         <header class="site-header">
             <div class="navbar">
-    <div class="icon">
-        <h2 class="logo">HowToFix101</h2>
+                <div class="icon">
+                    <h2 class="logo">HowToFix101</h2>
+                </div>
+
+               
+                <div class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                
+                <div class="menu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="search">
+                    <form onsubmit="searchSite(event)" style="display:flex; align-items:center;">
+                        <input class="srch" type="text" id="searchInput" placeholder="Type to search" required>
+                        <button class="btn" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+       
+        <div class="overlay" id="mobileOverlay" tabindex="-1"></div>
+
+        <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+
+            <div class="mobile-menu-content">
+                
+                <ul>
+                    <li><a href="#home" class="mobile-link">Home</a></li>
+                    <li><a href="#about" class="mobile-link">About</a></li>
+                    <li><a href="#services" class="mobile-link">Services</a></li>
+                    <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+                    <li><a href="#contact" class="mobile-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="home" class="page-section">
+            <div class="section-content">
+                <h1>Learn To<br><span>Fix</span></h1>
+                <p class="par">Hi, I know how stressful it feels when your computer <br> 
+                    suddenly breaks down-I've been there myself. <br> 
+                    What started as me fixing my own laptop eventually <br> 
+                    grew into a passion for solving tech problems for others.</p>
+                <div class="cn">
+                    <a href="https://www.facebook.com/profile.php?id=61580740565184" target="_blank">Visit fb page</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page-section">
+            <div class="section-content">
+                <h2>About Us</h2>
+                <p>Every repair has a story — and this is mine. HowToFix101 began as a passion project. It started with one broken laptop, a curious mind, and a student determined to learn how things work.</p>
+
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-date">Step 1 — The Beginning</div>
+                    <div class="timeline-content">
+                      <p>It all started when my own laptop suddenly stopped turning on. I didn’t have the budget for a professional repair, so I turned to the internet for help. Hours of watching YouTube tutorials and reading guides led me to my first successful fix — a battery replacement that brought my laptop back to life.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-date">Step 2 — The Learning Phase</div>
+                    <div class="timeline-content">
+                      <p>That small success opened my eyes to the world of DIY repair. I started learning more about hardware, troubleshooting, and maintenance. Every time something broke, it became an opportunity to learn — and to realize that fixing things isn’t as hard as it seems.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-date">Step 3 — The Idea</div>
+                    <div class="timeline-content">
+                      <p>After helping a few friends with their laptops and phones, I realized that many people were in the same situation — they wanted to fix things but didn’t know where to start. That’s when <strong>HowToFix101</strong> was born: a space dedicated to sharing what I learned and showing that anyone can repair their own tech.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-date">Step 4 — The Mission</div>
+                    <div class="timeline-content">
+                      <p>Today, HowToFix101 stands for something simple but powerful — <em>fixing is learning.</em> I believe anyone can start with basic tools and online resources to repair gadgets, save money, and build confidence. Our goal is to make technology less intimidating and more empowering for everyone.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p>So whether you’re a student, a hobbyist, or someone who just loves tinkering, HowToFix101 is here to help you get started. Let’s make fixing things simple, accessible, and rewarding — one project at a time.</p>
+            </div>
+        </section>
+
+        <section id="services" class="page-section">
+            <div class="section-content">
+                <h2>My Services</h2>
+                <p>I offer reliable, high-quality repair and maintenance services focused on helping you restore, optimize, and understand your technology — all at affordable rates.</p>
+
+                <div class="services-container">
+                  <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Hardware Repair</h3>
+                    <p>I fix common hardware issues such as battery failures, overheating, screen problems, and non-booting laptops using safe and professional repair techniques.</p>
+                  </div>
+                  <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Software Troubleshooting</h3>
+                    <p>From system errors and slow performance to viruses and corrupted files, I diagnose and repair software issues to restore your system’s stability and speed.</p>
+                  </div>
+                  <div class="service-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>System Upgrades</h3>
+                    <p>Want faster performance? I provide SSD upgrades, RAM installation, and optimization services to extend the life of your device and improve efficiency.</p>
+                  </div>
+                  <div class="service-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Guided Tech Learning</h3>
+                    <p>I don’t just fix devices — i teach you how to do it yourself. Learn basic repair skills with clear guidance, perfect for beginners and tech enthusiasts.</p>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="page-section">
+            <div class="section-content">
+                <h2>Portfolio</h2>
+                <p>Here’s one of my recent repair projects — a laptop that wouldn’t start due to a dead battery. I replaced the old battery, and it’s now working perfectly.</p>
+
+                <div class="portfolio-comparison">
+                  <div class="portfolio-item">
+                    <h3>Before</h3>
+                    <img src="e72a0203-fa7e-4a78-a535-da8362617ac2.jpg" alt="Laptop before repair">
+                    <p>Laptop not powering on due to battery failure.</p>
+                  </div>
+
+                  <div class="portfolio-item">
+                    <h3>After</h3>
+                    <img src="b5a54781-2d3b-403c-9567-9149e43ca4d4.jpg" alt="Laptop after repair">
+                    <p>New battery installed — laptop back to life.</p>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-section">
+            <div class="section-content">
+                <h2>Contact Me</h2>
+                <p>Get in touch with me for all your tech needs.</p>
+                <p>Im here to help you solve any technological challenge.</p>
+
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><strong>Phone:</strong> +63 xxx xxx xxxx</p>
+                  </div>
+
+                  <div class="contact-item">
+                    <i class="fab fa-facebook"></i>
+                    <p><strong>Facebook Page:</strong> 
+                      <a href="https://www.facebook.com/profile.php?id=61580740565184" target="_blank">
+                        HowToFix101
+                      </a>
+                    </p>
+                  </div>
+
+                  <div class="contact-item">
+                    <i class="fab fa-facebook-messenger"></i>
+                    <p><strong>Facebook User:</strong> 
+                      <a href="https://www.facebook.com/kylepatrick.millave.1/" target="_blank">
+                        Kyle Patrick Millave
+                      </a>
+                    </p>
+                  </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-    </div>
-
-    <div class="menu">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
- 
-                <div class="search">
-    <form onsubmit="searchSite(event)" style="display:flex; align-items:center;">
-        <input class="srch" type="text" id="searchInput" placeholder="Type to search" required>
-        <button class="btn" type="submit">Search</button>
-    </form>
-</div>
-
-            </div>
-        </header>  
-        
-        <section id="home" class="page-section">
-    <div class="section-content">
-        <h1>Learn To<br><span>Fix</span></h1>
-        <p class="par">Hi, I know how stressful it feels when your computer <br> 
-            suddenly breaks down-I've been there myself. <br> 
-            What started as me fixing my own laptop eventually <br> 
-            grew into a passion for solving tech problems for others.</p>
-        <div class="cn">
-            <a href="https://www.facebook.com/profile.php?id=61580740565184" target="_blank">Visit fb page</a>
-
-        </div>
-    </div>
-</section>
-
-        <section id="about" class="page-section">
-  <div class="section-content">
-    <h2>About Us</h2>
-    <p>Every repair has a story — and this is mine. HowToFix101 began as a passion project. It started with one broken laptop, a curious mind, and a student determined to learn how things work.</p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-date">Step 1 — The Beginning</div>
-        <div class="timeline-content">
-          <p>It all started when my own laptop suddenly stopped turning on. I didn’t have the budget for a professional repair, so I turned to the internet for help. Hours of watching YouTube tutorials and reading guides led me to my first successful fix — a battery replacement that brought my laptop back to life.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">Step 2 — The Learning Phase</div>
-        <div class="timeline-content">
-          <p>That small success opened my eyes to the world of DIY repair. I started learning more about hardware, troubleshooting, and maintenance. Every time something broke, it became an opportunity to learn — and to realize that fixing things isn’t as hard as it seems.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">Step 3 — The Idea</div>
-        <div class="timeline-content">
-          <p>After helping a few friends with their laptops and phones, I realized that many people were in the same situation — they wanted to fix things but didn’t know where to start. That’s when <strong>HowToFix101</strong> was born: a space dedicated to sharing what I learned and showing that anyone can repair their own tech.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">Step 4 — The Mission</div>
-        <div class="timeline-content">
-          <p>Today, HowToFix101 stands for something simple but powerful — <em>fixing is learning.</em> I believe anyone can start with basic tools and online resources to repair gadgets, save money, and build confidence. Our goal is to make technology less intimidating and more empowering for everyone.</p>
-        </div>
-      </div>
-    </div>
-
-    <p>So whether you’re a student, a hobbyist, or someone who just loves tinkering, HowToFix101 is here to help you get started. Let’s make fixing things simple, accessible, and rewarding — one project at a time.</p>
-  </div>
-</section>
-
-
-        <section id="services" class="page-section">
-  <div class="section-content">
-    <h2>My Services</h2>
-    <p>I offer reliable, high-quality repair and maintenance services focused on helping you restore, optimize, and understand your technology — all at affordable rates.</p>
-
-    <div class="services-container">
-      <div class="service-card">
-        <i class="fas fa-tools"></i>
-        <h3>Hardware Repair</h3>
-        <p>I fix common hardware issues such as battery failures, overheating, screen problems, and non-booting laptops using safe and professional repair techniques.</p>
-      </div>
-
-      <div class="service-card">
-        <i class="fas fa-laptop-code"></i>
-        <h3>Software Troubleshooting</h3>
-        <p>From system errors and slow performance to viruses and corrupted files, I diagnose and repair software issues to restore your system’s stability and speed.</p>
-      </div>
-
-      <div class="service-card">
-        <i class="fas fa-microchip"></i>
-        <h3>System Upgrades</h3>
-        <p>Want faster performance? I provide SSD upgrades, RAM installation, and optimization services to extend the life of your device and improve efficiency.</p>
-      </div>
-
-      <div class="service-card">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <h3>Guided Tech Learning</h3>
-        <p>I don’t just fix devices — i teach you how to do it yourself. Learn basic repair skills with clear guidance, perfect for beginners and tech enthusiasts.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-        <section id="portfolio" class="page-section">
-  <div class="section-content">
-    <h2>Portfolio</h2>
-    <p>Here’s one of my recent repair projects — a laptop that wouldn’t start due to a dead battery. I replaced the old battery, and it’s now working perfectly.</p>
-
-    <div class="portfolio-comparison">
-  <div class="portfolio-item">
-    <h3>Before</h3>
-    <img src="e72a0203-fa7e-4a78-a535-da8362617ac2.jpg" alt="Laptop before repair">
-    <p>Laptop not powering on due to battery failure.</p>
-  </div>
-
-  <div class="portfolio-item">
-    <h3>After</h3>
-    <img src="b5a54781-2d3b-403c-9567-9149e43ca4d4.jpg" alt="Laptop after repair">
-    <p>New battery installed — laptop back to life.</p>
-  </div>
-</div>
-  </div>
-</section>
-
-
-
-        <section id="contact" class="page-section">
-  <div class="section-content">
-    <h2>Contact Me</h2>
-    <p>Get in touch with me for all your tech needs.</p>
-    <p>Im here to help you solve any technological challenge.</p>
-
-    <div class="contact-info">
-      <div class="contact-item">
-        <i class="fas fa-phone-alt"></i>
-        <p><strong>Phone:</strong> +63 xxx xxx xxxx</p>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-facebook"></i>
-        <p><strong>Facebook Page:</strong> 
-          <a href="https://www.facebook.com/profile.php?id=61580740565184" target="_blank">
-            HowToFix101
-          </a>
-        </p>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-facebook-messenger"></i>
-        <p><strong>Facebook User:</strong> 
-          <a href="https://www.facebook.com/kylepatrick.millave.1/" target="_blank">
-            Kyle Patrick Millave
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-    </div>
     <script>
-function searchSite(event) {
-  event.preventDefault();
-  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-  const elements = document.querySelectorAll("section, p, h1, h2, h3, li");
+    function searchSite(event) {
+      event.preventDefault();
+      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      const elements = document.querySelectorAll("section, p, h1, h2, h3, li");
 
-  let found = false;
+      let found = false;
 
-  elements.forEach(element => {
-    const text = element.textContent.toLowerCase();
-    if (text.includes(searchTerm) && !found) {
-      element.scrollIntoView({ behavior: "smooth", block: "center" });
-      
-      
-      element.style.backgroundColor = "rgba(255, 255, 0, 0.3)";
-      setTimeout(() => element.style.backgroundColor = "transparent", 2000);
-      
-      found = true;
+      elements.forEach(element => {
+        const text = element.textContent.toLowerCase();
+        if (text.includes(searchTerm) && !found) {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+          element.style.backgroundColor = "rgba(255, 255, 0, 0.3)";
+          setTimeout(() => element.style.backgroundColor = "transparent", 2000);
+          found = true;
+        }
+      });
+
+      if (!found) {
+        alert("No match found on this page.");
+      }
     }
-  });
+    </script>
 
-  if (!found) {
-    alert("No match found on this page.");
-  }
-}
-</script>
+    <script>
+  
+    (function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileOverlay = document.getElementById('mobileOverlay');
+      const mobileClose = document.getElementById('mobileClose');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
 
-<script>
-function toggleMenu() {
-  document.querySelector(".menu ul").classList.toggle("show");
-}
-</script>
+      function openMenu() {
+        mobileMenu.classList.add('open');
+        mobileOverlay.classList.add('show');
+        document.body.classList.add('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+      }
 
-<script>
-function toggleMenu() {
-  const menu = document.querySelector('.menu ul');
-  menu.classList.toggle('show');
-}
-</script>
+      function closeMenu() {
+        mobileMenu.classList.remove('open');
+        mobileOverlay.classList.remove('show');
+        document.body.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+      }
+
+     
+      menuToggle.addEventListener('click', function() {
+        if (mobileMenu.classList.contains('open')) closeMenu();
+        else openMenu();
+      });
 
 
+      mobileOverlay.addEventListener('click', closeMenu);
+
+     
+      mobileClose.addEventListener('click', closeMenu);
+
+     
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+         
+          closeMenu();
+        });
+      });
+
+    
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
+      });
+    })();
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
