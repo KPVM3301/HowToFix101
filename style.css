@@ -36,6 +36,16 @@ html {
     z-index: 1000;
 }
 
+.menu-toggle {
+    display: none; 
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto; 
+    padding-right: 20px;
+}
+
+
 .icon{
     width: 200px;
     float: left;
@@ -455,9 +465,8 @@ ul li a:hover{
     }
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
-    /* General Layout Fix */
+    
     .section-content {
         width: 95%;
         padding: 20px 10px;
@@ -479,7 +488,7 @@ ul li a:hover{
         line-height: 1.4;
     }
 
-    /* Navbar Mobile */
+  
     .menu ul {
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.9);
@@ -505,14 +514,14 @@ ul li a:hover{
     }
 
     .search {
-        display: none; /* Hide search bar to save space */
+        display: none; 
     }
 
     ul li {
         margin: 15px 0;
     }
 
-    /* Cards (Services, Portfolio Items) */
+  
     .services-container,
     .portfolio-comparison {
         flex-direction: column;
@@ -525,13 +534,34 @@ ul li a:hover{
         max-width: 400px;
     }
 
-    /* Contact Section */
+    
     .contact-item {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
     }
 }
+
+.menu-toggle {
+    display: block;
+}
+
+.menu ul {
+    display: none; 
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 2px solid #444;
+}
+
+.menu ul.show {
+    display: flex;
+}
+
 
 
 
